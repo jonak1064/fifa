@@ -43,35 +43,35 @@ class FirstColumn extends StatelessWidget {
                   itemBuilder: (context) => [
                     const PopupMenuItem(
                       value: 'Team 1',
-                      child: Text('Team 1'),
+                      child: Text('Group 1'),
                     ),
                     const PopupMenuItem(
                       value: 'Team 2',
-                      child: Text('Team 2'),
+                      child: Text('Group 2'),
                     ),
                     const PopupMenuItem(
                       value: 'Team 3',
-                      child: Text('Team 3'),
+                      child: Text('Group 3'),
                     ),
                     const PopupMenuItem(
                       value: 'Team 4',
-                      child: Text('Team 4'),
+                      child: Text('Group 4'),
                     ),
                     const PopupMenuItem(
                       value: 'Team 5',
-                      child: Text('Team 5'),
+                      child: Text('Group 5'),
                     ),
                     const PopupMenuItem(
                       value: 'Team 6',
-                      child: Text('Team 6'),
+                      child: Text('Group 6'),
                     ),
                     const PopupMenuItem(
                       value: 'Team 7',
-                      child: Text('Team 7'),
+                      child: Text('Group 7'),
                     ),
                     const PopupMenuItem(
                       value: 'Team 8',
-                      child: Text('Team 8'),
+                      child: Text('Group 8'),
                     ),
                   ],
                   onSelected: (value) {

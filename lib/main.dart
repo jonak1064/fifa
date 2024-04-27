@@ -1,6 +1,5 @@
-import 'package:fifa/widgets/first_column.dart';
-import 'package:flutter/material.dart';
 import 'package:fifa/screens/tabs.dart';
+import 'package:flutter/material.dart';
 
 void main() {
   runApp(

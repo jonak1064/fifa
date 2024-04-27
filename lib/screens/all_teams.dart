@@ -1,11 +1,14 @@
-import 'package:fifa/widgets/first_column.dart';
 import 'package:flutter/material.dart';
+import 'package:fifa/model/team.dart';
+import 'package:fifa/widgets/first_column.dart';
 
 class AllTeamScreen extends StatelessWidget {
-  const AllTeamScreen({super.key});
+  final Function(Team, int) addTeamToGroup;
+
+  const AllTeamScreen({super.key, required this.addTeamToGroup});
 
   @override
   Widget build(BuildContext context) {
-    return const FirstColumn();
+    return FirstColumn(addTeamToGroup: addTeamToGroup);
   }
 }

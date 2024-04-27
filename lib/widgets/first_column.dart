@@ -1,9 +1,17 @@
-import 'package:fifa/data/dummy_data.dart';
 import 'package:flutter/material.dart';
+import 'package:fifa/model/team.dart';
+import 'package:fifa/data/dummy_data.dart';
 
-class FirstColumn extends StatelessWidget {
-  const FirstColumn({super.key});
+class FirstColumn extends StatefulWidget {
+  final Function(Team, int) addTeamToGroup;
 
+  const FirstColumn({super.key, required this.addTeamToGroup});
+
+  @override
+  State<FirstColumn> createState() => _FirstColumnState();
+}
+
+class _FirstColumnState extends State<FirstColumn> {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -42,57 +50,40 @@ class FirstColumn extends StatelessWidget {
                 PopupMenuButton(
                   itemBuilder: (context) => [
                     const PopupMenuItem(
-                      value: 'Team 1',
+                      value: 1,
                       child: Text('Group 1'),
                     ),
                     const PopupMenuItem(
-                      value: 'Team 2',
+                      value: 2,
                       child: Text('Group 2'),
                     ),
                     const PopupMenuItem(
-                      value: 'Team 3',
+                      value: 3,
                       child: Text('Group 3'),
                     ),
                     const PopupMenuItem(
-                      value: 'Team 4',
+                      value: 4,
                       child: Text('Group 4'),
                     ),
                     const PopupMenuItem(
-                      value: 'Team 5',
+                      value: 5,
                       child: Text('Group 5'),
                     ),
                     const PopupMenuItem(
-                      value: 'Team 6',
+                      value: 6,
                       child: Text('Group 6'),
                     ),
                     const PopupMenuItem(
-                      value: 'Team 7',
+                      value: 7,
                       child: Text('Group 7'),
                     ),
                     const PopupMenuItem(
-                      value: 'Team 8',
+                      value: 8,
                       child: Text('Group 8'),
                     ),
                   ],
                   onSelected: (value) {
-                    switch (value) {
-                      case 'Team 1':
-                        break;
-                      case 'Team 2':
-                        break;
-                      case 'Team 3':
-                        break;
-                      case 'Team 4':
-                        break;
-                      case 'Team 5':
-                        break;
-                      case 'Team 6':
-                        break;
-                      case 'Team 7':
-                        break;
-                      case 'Team 8':
-                        break;
-                    }
+                    widget.addTeamToGroup(team, value);
                   },
                   child: const Text('Add'),
                 ),
